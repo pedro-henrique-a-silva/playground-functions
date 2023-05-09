@@ -11,6 +11,8 @@ const splitSentence = phrase => phrase.split(' ');
 
 // Desafio 3 - Crie a função concatName
 
+const concatName = arrayName => `${arrayName[(arrayName.length -1)]}, ${arrayName[0]}`;
+
 // Desafio 4 - Crie a função footballPoints
 
 // Desafio 5 - Crie a função highestCount
