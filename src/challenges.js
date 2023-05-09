@@ -127,9 +127,20 @@ const decode = (word) => {
   return wordDecrypted;
 };
 
-console.log(decode('h3 th2r2!'));
-
 // Desafio 10 - Crie a função techList
+
+const techList = (array, personName) => {
+  if (!array || !personName) {
+    return [];
+  }
+  const arrayTechList = [];
+
+  for (let techName of array.sort()) {
+    arrayTechList.push({ tech: techName, name: personName });
+  }
+
+  return arrayTechList;
+};
 
 // Não modifique essas linhas
 module.exports = {
