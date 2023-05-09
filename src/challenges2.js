@@ -37,9 +37,36 @@ const generatePhoneNumber = (arrayNumber) => {
   return `(${parte1}) ${parte2}-${parte3}`;
 };
 
-console.log(countNumbers([1, 2, 3, 4, 5, 6, 7, 8, 1, 0, 1]));
-// (12) 34567-8901
 // Desafio 12 -  Crie a função triangleCheck
+const triangleCheck = (lineA, lineB, lineC) => {
+  const lineValuesObj = {
+    A:{
+      value: lineA,
+      soma:lineB + lineC,
+      sub: Math.abs(lineB - lineC),
+    },
+    B:{
+      value: lineB,
+      soma: lineA + lineC,
+      sub: Math.abs(lineA - lineC),
+    },
+    C:{
+      value: lineC,
+      soma: lineA + lineB,
+      sub: Math.abs(lineA - lineB),
+    },
+  }
+
+  for (let key of Object.keys(lineValuesObj)) {
+    if (lineValuesObj[key].value > lineValuesObj[key].soma ||
+        lineValuesObj[key].value < lineValuesObj[key].sub) {
+      return false
+    }
+  }
+  return true
+}
+
+console.log(triangleCheck(2, 3, 4));
 
 // Desafio 13 - Crie a função hydrate
 
