@@ -84,9 +84,50 @@ const fizzBuzz = (arrayNumber) => {
   return arrayFizzBuzz;
 };
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
-
 // Desafio 9 - Crie a função encode e a função decode
+
+const encode = (word) => {
+  const cryptKeys = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+  let wordCrypted = '';
+
+  for (let letter of word) {
+    if (Object.keys(cryptKeys).includes(letter)) {
+      wordCrypted += cryptKeys[letter];
+    } else {
+      wordCrypted += letter;
+    }
+  }
+  return wordCrypted;
+};
+// decode function
+
+const decode = (word) => {
+  const decryptKeys = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  let wordDecrypted = '';
+
+  for (let letter of word) {
+    if (Object.keys(decryptKeys).includes(letter)) {
+      wordDecrypted += decryptKeys[letter];
+    } else {
+      wordDecrypted += letter;
+    }
+  }
+  return wordDecrypted;
+};
+
+console.log(decode('h3 th2r2!'));
 
 // Desafio 10 - Crie a função techList
 
