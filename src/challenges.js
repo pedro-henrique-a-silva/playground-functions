@@ -1,19 +1,28 @@
 // Desafio 1 - Crie a função compareTrue
-const girafa = true;
-const elefante = true;
-const macaco = false;
+// const girafa = true;
+// const elefante = true;
+// const macaco = false;
 
-const compareTrue = (param1, param2) => (param1 && param2) ? true : false;
+const compareTrue = (param1, param2) => (param1 && param2);
 
 // Desafio 2 - Crie a função splitSentence
 
-const splitSentence = phrase => phrase.split(' '); 
+const splitSentence = (phrase) => phrase.split(' ');
 
 // Desafio 3 - Crie a função concatName
 
-const concatName = arrayName => `${arrayName[(arrayName.length -1)]}, ${arrayName[0]}`;
+const concatName = (arrayName) => `${arrayName[(arrayName.length - 1)]}, ${arrayName[0]}`;
 
 // Desafio 4 - Crie a função footballPoints
+
+const footballPoints = (wins, ties) => {
+  const winsPoints = 3;
+  const tiesPoints = 1;
+  if ((typeof wins !== 'number') || (typeof ties !== 'number')) {
+    return 'Vitórias e empates precisam ser números';
+  }
+  return (wins * winsPoints) + (ties * tiesPoints);
+};
 
 // Desafio 5 - Crie a função highestCount
 
