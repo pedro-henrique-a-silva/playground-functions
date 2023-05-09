@@ -61,9 +61,30 @@ const catAndMouse = (mouse, cat1, cat2) => {
   return (positionCat1 < positionCat2) ? 'cat1' : 'cat2';
 };
 
-console.log(catAndMouse(500, 20, 20));
-
 // Desafio 8 - Crie a função fizzBuzz
+const checkDivisivel = (numero) => {
+  const tres = (numero % 3 === 0) ? 'fizz' : '';
+  const cinco = (numero % 5 === 0) ? 'buzz' : '';
+  return (tres && cinco) ? `${tres}Buzz` : `${tres}${cinco}`;
+};
+
+const wordConstruct = (numero) => {
+  let word = checkDivisivel(numero);
+
+  if (!word) word = 'bug!';
+
+  return word.trim();
+};
+
+const fizzBuzz = (arrayNumber) => {
+  const arrayFizzBuzz = [];
+  for (let number of arrayNumber) {
+    arrayFizzBuzz.push(wordConstruct(number));
+  }
+  return arrayFizzBuzz;
+};
+
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9 - Crie a função encode e a função decode
 
