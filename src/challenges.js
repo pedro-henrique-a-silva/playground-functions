@@ -7,6 +7,8 @@ const compareTrue = (param1, param2) => (param1 && param2) ? true : false;
 
 // Desafio 2 - Crie a função splitSentence
 
+const splitSentence = phrase => phrase.split(' '); 
+
 // Desafio 3 - Crie a função concatName
 
 // Desafio 4 - Crie a função footballPoints
